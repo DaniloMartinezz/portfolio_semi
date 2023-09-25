@@ -1,0 +1,688 @@
+body {
+    background-color: #131414;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+h1 {
+    
+    font-size: 2rem;
+    color: white;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: grey;
+    font-weight: 400;
+}
+
+
+
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px 40px;
+    
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+#icone {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.iconin {
+    margin: 5px 0px 0px 10px;
+    color: #986DFF;
+}
+
+.menu-name {
+    font-size: 2rem;
+    font-weight: 500;
+    color: rgb(247, 243, 243);
+}
+
+.menu-item {
+    font-weight: 500;
+    color: #7D7C7C;
+    padding: 20px;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s;
+    padding-bottom: 5px;
+}
+
+.menu-item:hover {
+    color: white;
+}
+
+.menu-item:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    
+    background-color: #986DFF;
+    animation: underlineAnim 0.3s forwards;
+}
+
+@keyframes underlineAnim {
+    from {
+        width: 0%;
+        left: 50%;
+        right: 50%;
+    }
+    to {
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+}
+
+
+
+.all { 
+    padding: 10vw 5vw 5vw 15vw ;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 45vh;
+}
+
+.firstmain {
+    width: 50%;
+}
+
+
+span {
+    color: #986DFF;
+}
+
+/* Efeito de cursor piscando */
+#texto:after {
+    color: #986DFF;
+    content: '|';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+button {
+    position: relative;
+    background-color: #986DFF;
+    border-radius: 5px;
+    box-shadow: #986DFF;
+    padding: 15px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    width: 154px;
+    height: 49px;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  button::before {
+    content: "";
+    background-color: #0077B5;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 700ms ease-in-out;
+    display: inline-block;
+  }
+  
+  button:hover::before {
+    width: 100%;
+  }
+
+
+
+
+
+
+
+
+#projeto-pai {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cria duas colunas de tamanho igual */    
+    margin: 0 auto; 
+}
+
+#projetos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Isso garante que haja um espaçamento uniforme entre os cards */
+    padding: 50px;
+    width: 50vh;
+    max-width: 1500px; /* ajuste conforme necessário */
+    margin: 0 auto; /* centraliza a seção de projetos */
+}
+
+
+.card {
+    
+    position: relative;
+    box-sizing: border-box; 
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    transition: all 0.5s;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.info {
+    padding: 10px;
+}
+
+.projetoFrame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: none;
+    transition: all 0.5s;
+}
+
+.expandido {
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    z-index: 10;
+}
+
+.expandido .projetoFrame {
+    width: 100%;
+    height: 100%;
+}
+
+.iconscard {
+    display: flex;
+    margin-top: 15px;
+    
+}
+
+.htmlp {
+    margin: 0px 5px 0px 5px;
+    font-size: 15px;
+    padding: 2px 3px 2px 3px;
+    background-color:#BAD5F5;
+    font-weight: 500;
+    border-radius:3px;
+}
+
+.cssp {
+    margin: 0px 5px 0px 5px;
+    font-size: 15px;
+    padding: 2px 5px 2px 5px;
+    background-color:#E1C1C1;
+    font-weight: 500;
+    border-radius:3px;
+}
+
+.jsp {
+    margin: 0px 5px 0px 5px;
+    font-size: 15px;
+    padding: 2px 5px 2px 5px;
+    background-color:#F2C986;
+    font-weight: 500;
+    border-radius:3px;
+}
+
+p {
+    color: white;
+}
+
+h3 {
+    width: 83%;
+    font-size: 15px;
+    font-weight: 500;
+    color: #F7F5F2;
+}
+
+.mais {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+.box_exp {
+    display: flex;
+    
+}
+
+
+h4 {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 400;
+}
+
+.about {
+    padding: 10vh 10vh 10vh 30vh; 
+    background-color:#151515;
+
+}
+
+.categoria {
+    padding: 10px;
+    font-size: 1.1rem;
+    position: relative; 
+    text-decoration: none; 
+    color: white; 
+    display: block; 
+}
+
+.categoria::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    background-color: transparent; 
+}
+
+.categoria:focus::before {
+    background-color: #986DFF;
+}
+
+.box_categorias {
+    box-sizing: border-box;
+    background-color: #131414;
+    padding: 1vh 20vh 1vh 2vh;
+    border-radius: 7px;
+    
+}
+
+.box_conteudo {
+    padding: 0vh 0vh 0vh 20vh;
+}
+
+#titulo {
+    font-size: 1.7rem;
+    font-weight:400;
+    color: white;
+}
+
+#subtitulo {
+    color: #986DFF;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+#texto {
+    color: #8a909b;
+    font-size: 1.2rem;
+    font-weight: 400;
+    max-width: 750px;
+}
+
+
+
+
+.cardContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.cardi {
+    width: calc(33.33% - 20px);
+    background-color: #151515;
+    border: 1px solid #1f1f1f;
+    border-radius: 5px;
+    padding: 20px 40px 40px 20px;
+    box-sizing: border-box;
+    text-align: left; 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardi:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #986DFF;
+}
+
+.icon {
+    color: #986DFF;
+    display: inline-block;
+    
+    margin-bottom: 15px;
+}
+
+.cardTitle {
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 400;
+    color: white;
+}
+
+.cardDescription {
+    font-size: 20px;
+    color: #666;
+}
+
+.cardSection {
+    height: 50vh;
+    display: flex;
+}
+
+
+
+/* Breakpoints */
+@media screen and (max-width: 768px) {
+
+    /* Ajustar o cabeçalho e o menu */
+    header {
+        flex-direction: column;
+    }
+  
+    .left {
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+  
+    .right {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .menu-item {
+        margin-bottom: 15px;
+    }
+  
+    /* Ajustar a seção de projetos */
+    #projeto-pai {
+        grid-template-columns: 1fr;
+    }
+  
+    #projetos {
+        width: 100%;
+        padding: 20px 0;
+    }
+  
+    /* Ajustar a seção sobre */
+    .box_exp {
+        flex-direction: column;
+    }
+  
+    .box_categorias {
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+  
+    .box_conteudo {
+        padding: 10px;
+    }
+  
+    /* Ajustar os cards de serviços */
+    .cardContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .cardi {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    /* Ajustes específicos para dispositivos com tela pequena, geralmente smartphones. */
+  
+    /* Ajustar o cabeçalho e o menu */
+    .menu-name {
+        font-size: 1.5rem;
+    }
+  
+    .iconin {
+        width: 20px;
+        height: 20px;
+    }
+  
+    /* Ajustar a seção principal */
+    .all { 
+        padding: 10vw 5vw;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+  
+    .firstmain {
+        width: 100%;
+    }
+  
+    /* Ajustar a seção de projetos */
+    #projetos {
+        padding: 20px;
+    }
+  
+    .card {
+        width: 100%;
+    }
+  
+    h3 {
+        font-size: 13px;
+    }
+  
+    /* Ajustar a seção sobre */
+    .box_categorias, .box_conteudo {
+        padding: 10px;
+    }
+  
+    h4 {
+        font-size: 1.3rem;
+    }
+  
+    #titulo {
+        font-size: 1.5rem;
+    }
+  
+    #subtitulo, #texto {
+        font-size: 1rem;
+    }
+  
+    /* Ajustar os cards de serviços */
+    .cardDescription {
+        font-size: 16px;
+    }
+  
+    /* Outros ajustes específicos conforme necessário... */
+  }
+
+
+
+  @media screen and (max-width: 480px) {
+    /* Ajustes específicos para dispositivos com tela pequena, geralmente smartphones. */
+
+    /* Ajustar o cabeçalho e o menu */
+    header {
+        padding: 20px 10px;
+    }
+
+    .menu-item {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Ajustar a seção principal */
+    .all {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    h1, h2 {
+        margin-bottom: 20px;
+    }
+
+    button {
+        width: 130px;
+        height: 40px;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    /* Ajustar a seção de projetos */
+    .card {
+        margin: 0 0 20px 0;
+    }
+
+    h3 {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .iconscard {
+        margin-bottom: 10px;
+    }
+
+    .htmlp, .cssp, .jsp {
+        font-size: 0.9rem;
+    }
+
+    /* Ajustar a seção sobre */
+    .categoria {
+        font-size: 1rem;
+        padding: 10px 5px;
+    }
+
+    #titulo {
+        font-size: 1.4rem;
+    }
+
+    #subtitulo, #texto {
+        font-size: 1rem;
+    }
+
+    /* Ajustar os cards de serviços */
+    .cardContainer {
+        padding: 20px 0;
+    }
+
+    .cardTitle {
+        font-size: 1.4rem;
+    }
+
+    .cardDescription {
+        font-size: 1rem;
+    }
+
+    .icon {
+        margin-bottom: 10px;
+    }
+
+    /* Outros ajustes para otimizar a visualização em smartphones */
+    .box_exp {
+        flex-direction: column-reverse;
+    }
+
+    .box_categorias {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+    /* ... Outras regras ... */
+
+    /* Ajustes para a seção "Experiências e Formação" */
+    .about {
+        padding: 20px 10px;
+    }
+
+    .box_exp {
+        flex-direction: column;
+        gap: 20px;  /* Espaçamento entre box_categorias e box_conteudo */
+    }
+
+    .box_categorias {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;  /* Espaçamento entre os itens da categoria */
+    }
+
+    .categoria {
+        display: inline-block;
+        padding: 8px 12px;
+        margin-bottom: 10px;
+        background-color: #202020;  /* Adicionando um fundo para melhorar a visualização */
+        border-radius: 5px;
+        transition: background-color 0.3s ease;  /* Transição para mudança de cor de fundo ao tocar */
+    }
+
+    .categoria:focus,
+    .categoria:active {
+        background-color: #986DFF;
+        color: #FFFFFF;
+    }
+
+    #titulo {
+        margin-top: 10px;
+        font-size: 1.4rem;
+    }
+
+    #subtitulo {
+        margin-top: 5px;
+        font-size: 1.2rem;
+    }
+
+    #texto {
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+}
+
